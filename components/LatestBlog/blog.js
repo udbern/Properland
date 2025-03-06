@@ -49,7 +49,7 @@ export default function Blog() {
           <div className="flex flex-col w-full">
             {blogs.map((blog, index) => (
               <div key={index} className="mb-12">
-                <div className="max-w-[898px] mx-auto mt-5 h-full md:h-[342px]">
+                <div className="max-w-[898px] mx-auto mt-5 h-60 md:h-[342px]">
                   {blog.mainImage && (
                     <Image
                       src={urlFor(blog.mainImage).url()}
