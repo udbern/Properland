@@ -56,7 +56,7 @@ export default function Hero() {
     if (!agent) return <div>Agent not found</div>;
 
     return (
-        <div className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-[#fce8de] to-[#f8d8c4] mb-30  px-4 sm:px-6 md:px-12  md:py-32 py-20">
+        <div className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-[#fce8de] to-[#f8d8c4] mb-40  px-4 sm:px-6 md:px-12  md:py-32 py-20">
             <div className="relative max-w-6xl w-full grid mt-20 grid-cols-1 md:grid-cols-2 items-center gap-8 md:gap-16">
                 {/* Left Side: Agent Info */}
                 <div className="z-10 relative   space-y-4">
@@ -74,10 +74,10 @@ export default function Hero() {
                                   </span>
                                 </div>
                               </div>
-                    <h1 className="text-primary font-bold text-3xl sm:text-4xl md:text-5xl mt-4">{agent.name}</h1>
-                    <p className="text-link mt-4 leading-relaxed text-sm sm:text-base">{agent.description}</p>
+                    <h1 className="text-primary font-bold font-kufam text-3xl sm:text-4xl md:text-5xl mt-4">{agent.name}</h1>
+                    <p className="text-link mt-4 leading-relaxed font-sans3 text-sm sm:text-base">{agent.description}</p>
 
-                    <div className="mt-6 space-y-3 text-link">
+                    <div className="mt-6 space-y-3 font-sans3 text-link">
                         <p className=" flex items-center text-sm sm:text-base">
                             <AiFillMail className="mr-3 text-lg " /> {agent.email}
                         </p>
@@ -86,25 +86,25 @@ export default function Hero() {
                         </p>
                     </div>
 
-                    <div className="mt-8 md:absolute md:-bottom-70 md:left-0 flex gap-6 md:gap-12 p-4">
+                    <div className="mt-8 md:absolute md:-bottom-60 md:left-0 flex gap-6 md:gap-12 p-4">
                         <div className="text-center">
-                            <h3 className="text-xl md:text-2xl font-bold text-primary">{agent.propertySales}</h3>
-                            <p className="text-xs md:text-sm  text-link">In property sales</p>
+                            <h3 className="text-xl md:text-3xl font-kufam font-bold text-primary">{agent.propertySales}</h3>
+                            <p className="text-xs md:text-sm  font-sans3 text-link">In property sales</p>
                         </div>
                         <div className="text-center">
-                            <h3 className="text-xl md:text-2xl font-bold text-primary ">{agent.customerSatisfaction}%</h3>
-                            <p className="text-xs md:text-sm text-link">Customer satisfaction</p>
+                            <h3 className="text-xl md:text-3xl font-kufam font-bold text-primary ">{agent.customerSatisfaction}%</h3>
+                            <p className="text-xs md:text-sm font-sans3 text-link">Customer satisfaction</p>
                         </div>
                         <div className="text-center">
-                            <h3 className="text-xl md:text-2xl font-bold text-primary ">{agent.propertyTransactions}+</h3>
-                            <p className="text-xs md:text-sm text-link">Property transactions</p>
+                            <h3 className="text-xl md:text-3xl font-kufam font-bold text-primary ">{agent.propertyTransactions}+</h3>
+                            <p className="text-xs md:text-sm font-sans3 text-link">Property transactions</p>
                         </div>
                     </div>
                 </div>
 
                 {/* Right Side: Agent Image */}
                 <div className="relative md:mt-0">
-                    <div className="relative  md:absolute md:-top-25 md:right-[20px] w-full  md:w-[500px] md:h-[550px] bg-gradient-to-b from-[#F3D1C1] to-[#FFEEE5] rounded-sm p-2 md:p-6 overflow-hidden">
+                    <div className="relative  md:absolute md:-top-35 md:right-[20px] w-full  md:w-[500px] md:h-[550px] bg-gradient-to-b from-[#F3D1C1] to-[#FFEEE5] rounded-sm p-2 md:p-8 overflow-hidden">
                         <Image
                             src={urlFor(agent.image).url()}
                             height={1000}
