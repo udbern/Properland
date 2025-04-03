@@ -3,7 +3,7 @@ import Image from "next/image";
 import HeroImg from "../public/notbg.png";
 import Not from "../public/notfound.png";
 import Link from "next/link";
-import { ArrowRightCircleIcon} from "@heroicons/react/24/solid";
+import { ArrowRightCircleIcon } from "@heroicons/react/24/solid";
 
 export default function NotFound() {
     return (
@@ -13,24 +13,24 @@ export default function NotFound() {
                     backgroundImage: `url(${HeroImg.src})`,
                     backgroundSize: "cover",
                 }}>
-                <div className="flex min-h-screen sm:min-h-[90vh] md:min-h-[100vh] max-w-[609px] w-full mt-35 md:mt-17  mx-auto">
+                <div className="flex min-h-screen sm:min-h-[90vh] md:min-h-[100vh] max-w-[609px] w-full mt-35 md:mt-20  mx-auto">
                     <div className="flex flex-col items-center mt-6 sm:mt-10 text-center w-full">
-                        <div className="flex items-center border justify-center bg-gradient-to-r to-[#FFB28D]  px-4 from-[#F3D1C1]  ">
-                            <div>
-                            <Image
-                                src={House}
-                                alt="tiny-house"
-                                width={50}
-                                height={50}
-                                className="object-contain sm:w-6 sm:h-6"
-                            />
+                        <div className="flex items-center border justify-center bg-gradient-to-r  to-[#FFB28D]  px-4 from-[#F3D1C1]  ">
+                            <div className=" ">
+                                <Image
+                                    src={House}
+                                    alt="tiny-house"
+                                    width={40}
+                                    height={40}
+                                    className="object-contain object-center "
+                                />
                             </div>
-                            <span className="font-kufam h-full w-full  flex items-center justify-center  text-link uppercase text-sm sm:text-base md:text-lg lg:text-xl font-normal">
-                                <p className="font-kufam text-3xl ">404</p>
+                            <span className="font-kufam  h-full w-full  flex items-center justify-center  text-link uppercase text-sm sm:text-base md:text-lg lg:text-xl font-normal">
+                                <p className="font-kufam text-3xl  ">404</p>
                             </span>
                         </div>
 
-                        <h1 className="text-primary font-kufam font-bold text-2xl sm:text-4xl md:text-5xl lg:text-[6rem] leading-tight">
+                        <h1 className="text-primary font-kufam py-5 font-bold text-2xl sm:text-4xl md:text-5xl lg:text-[6rem] leading-tight">
                             Error
                         </h1>
                         <Image

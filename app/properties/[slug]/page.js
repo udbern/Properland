@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
+import Link from "next/link";
 import Image from "next/image";
 import { IoLocationSharp } from "react-icons/io5";
 import { client, urlFor } from "../../../lib/sanity";
@@ -9,6 +10,7 @@ import { PortableText } from "@portabletext/react";
 import { FaBed, FaBath, FaCar, FaRulerCombined } from "react-icons/fa";
 import { BsMailbox, BsTelephone } from "react-icons/bs";
 import { BiMailSend } from "react-icons/bi";
+
 
 export default function PropertyDetails() {
     const { slug } = useParams();
@@ -85,7 +87,7 @@ export default function PropertyDetails() {
     }
 
     return (
-      <div className="max-w-6xl mx-auto justify-center pt-20 pb-10 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto justify-center pt-20 md:mt-20  pb-10 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-6">
           {/* Property Details */}
           <div>
@@ -172,12 +174,56 @@ export default function PropertyDetails() {
                         </div>
                         
                       </div>
-                      <div className="flex  bg-amber-50 p-6 flex-col font-normal font-sans3 text-[#7D7D7D]">
-                        <p className="flex items-center gap-2"><BiMailSend className="text-secondary" />{agent.email || "N/A"}</p>
+                      <div className="flex  bg-amber-50 p-2 py-6 flex-col font-normal font-sans3 text-[#7D7D7D]">
+                        <p className="flex items-center text-sm gap-2"><BiMailSend className="text-secondary" />{agent.email || "N/A"}</p>
                         <p className="flex items-center gap-2"><BsTelephone className=" text-secondary" />{agent.phone || "N/A"}</p>
-                        </div>
-                      
+                      </div>
+                       {/* Added Contact Agent Button */}
+                       <div className="mt-4">
+                        <Link 
+                          href={`/contact?agent=${agent.name}&email=${agent.email}`}
+                          className="block w-full bg-primary text-white py-3 px-4 rounded-sm text-center font-medium hover:bg-primary/90 transition-colors duration-200"
+                        >
+                          Contact Agent
+                        </Link>
+                      </div>
+                       {/* Alternative: Quick Contact Form */}
+                       <div className="mt-6 bg-white p-4 rounded-sm border border-gray-200">
+                        <h4 className="text-lg font-kufam text-primary mb-3">Quick Message</h4>
+                        <form className="space-y-3">
+                          <div>
+                            <input 
+                              type="text" 
+                              placeholder="Your Name" 
+                              className="w-full p-2 border border-gray-300 rounded-sm focus:outline-none focus:ring-1 focus:ring-primary"
+                              required
+                            />
+                          </div>
+                          <div>
+                            <input 
+                              type="email" 
+                              placeholder="Your Email" 
+                              className="w-full p-2 border border-gray-300 rounded-sm focus:outline-none focus:ring-1 focus:ring-primary"
+                              required
+                            />
+                          </div>
+                          <div>
+                            <textarea 
+                              placeholder="Your Message" 
+                              className="w-full p-2 border border-gray-300 rounded-sm focus:outline-none focus:ring-1 focus:ring-primary h-24"
+                              required
+                            ></textarea>
+                          </div>
+                          <button 
+                            type="submit" 
+                            className="w-full bg-secondary text-white py-2 px-4 rounded-sm font-medium hover:bg-secondary/90 transition-colors duration-200"
+                          >
+                            Send Message
+                          </button>
+                        </form>
+                      </div>
                     </div>
+                    
                   ))}
                 </div>
               ) : (
