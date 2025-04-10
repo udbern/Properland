@@ -37,7 +37,7 @@ export default function Agents() {
 
   return (
     <div className="max-w-6xl mx-auto justify-center pt-20 pb-10 px-4 sm:px-6  lg:px-8 mb-20">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {agents.map((agent) => (
           <Link key={agent._id} href={`/agents/${agent.slug}`} className="group  block h-full">
             <div className="relative aspect-[3/4] w-full overflow-hidden">

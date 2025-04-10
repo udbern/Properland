@@ -82,11 +82,11 @@ export default function PropertyDetails() {
   }
 
   return (
-    <div className="max-w-6xl mx-auto justify-center pt-20  pb-10 px-4 sm:px-6 lg:px-8">
+    <div className="max-w-6xl mx-auto justify-center  pt-20  pb-10 px-4 sm:px-6 lg:px-8">
       <div className="grid grid-cols-1 md:grid-cols-2  items-center gap-6">
         {/* Property Details */}
         <div>
-          <p className="text-[#8E8E8E] font-sans3 flex items-center text-sm sm:text-base md:text-sm mb-4">
+          <p className="text-[#8E8E8E]  font-sans3 flex items-center text-sm sm:text-base md:text-sm mb-4">
             <IoLocationSharp className="text-secondary md:text-2xl mr-1" />
             {property.location || "Location not available"}
           </p>
