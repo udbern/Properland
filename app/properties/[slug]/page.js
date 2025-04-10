@@ -174,9 +174,9 @@ export default function PropertyDetails() {
                         </div>
                         
                       </div>
-                      <div className="flex  bg-amber-50 p-2 py-6 flex-col font-normal font-sans3 text-[#7D7D7D]">
-                        <p className="flex items-center text-sm gap-2"><BiMailSend className="text-secondary" />{agent.email || "N/A"}</p>
-                        <p className="flex items-center gap-2"><BsTelephone className=" text-secondary" />{agent.phone || "N/A"}</p>
+                      <div className="flex  bg-white p-2 py-6 space-y-4 flex-col font-normal font-sans3 text-[#7D7D7D]">
+                        <p className="flex items-center text-md gap-2"><BiMailSend className="text-secondary" />{agent.email || "N/A"}</p>
+                        <p className="flex items-center text-md gap-2"><BsTelephone className=" text-secondary" />{agent.phone || "N/A"}</p>
                       </div>
                        {/* Added Contact Agent Button */}
                        <div className="mt-4">
